@@ -3,15 +3,15 @@ class student:
     def __init__(self, name, age):
         self.__name = name
         self.__age = age
-
-    @property
-    def name(self):
-        return self.__name
-181
+        
     @staticmethod
     def info():
         return 'This class beloangs to {}'.format(student.school_name)
-
+    
+    @property
+    def name(self):
+        return self.__name
+    
     @name.setter
     def name(self, other):
         if not (isinstance(other, str) or other.isalpha()):
@@ -51,9 +51,6 @@ class student:
                 'and \"student\" type.'
                 )
         return self['age'] < other['age']
-
-
-
 
 def main():
     s1 = student('namehi', 18)
