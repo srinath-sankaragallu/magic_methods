@@ -4,9 +4,13 @@ class student:
         self.__name = name
         self.__age = age
         
+    @classmethod
+    def from_dict(cls,dictionary):
+        return cls(dictionary['name'] , dictionary['age'] )
+    
     @staticmethod
-    def info():
-        return 'This class beloangs to {}'.format(student.school_name)
+    def isadult(age):
+        return age > 18
     
     @property
     def name(self):
